@@ -1,0 +1,13 @@
+{
+  "title": "AMSAT",
+  "files": [
+    {
+      "path": "amsat/satellites.json",
+      "description": "Satellite listing with additional metadata such as health, modes, transponders, etc."
+    },
+    {
+      "path": "amsat/dailytle.txt",
+      "description": "Raw daily TLEs from AMSAT"
+    }
+  ]
+}

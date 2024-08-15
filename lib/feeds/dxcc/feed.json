@@ -1,0 +1,9 @@
+{
+  "title": "DXCC",
+  "files": [
+    {
+      "path": "dxcc/most_wanted.json",
+      "description": "The most wanted DXCC entities according to Club Log statistics."
+    }
+  ]
+}
