@@ -16,6 +16,7 @@ data = tle_text.split("\n").each_slice(3).map do |name, tle1, tle2|
 
   {
     'name' => name,
+    'tqsl_name' => name,
     'number' => number,
     'tle' => [tle1, tle2],
     'heard' => false,
@@ -23,7 +24,7 @@ data = tle_text.split("\n").each_slice(3).map do |name, tle1, tle2|
     'modes' => [],
     'urls' => [],
     'transponders' => [],
-    'tqsl_name' => nil
+    'status' => 'unknown'
 }.merge(meta)
 end
 

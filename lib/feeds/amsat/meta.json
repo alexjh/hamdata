@@ -1,6 +1,6 @@
 {
   "AO-07": {
-    "heard": true,
+    "status": "usable",
     "tqsl_name": "AO-7",
     "urls": ["https://www.amsat.org/two-way-satellites/ao-7/"],
     "modes": ["linear"],
@@ -20,38 +20,33 @@
     ]
   },
   "AO-73": {
-    "heard": true,
-    "tqsl_name": "AO-73",
+    "status": "usable",
     "aliases": ["FUNcube-1"],
     "urls": ["https://www.amsat.org/two-way-satellites/ao-73-funcube-1/"],
     "modes": ["linear"]
   },
   "IO-117": {
-    "heard": true,
-    "tqsl_name": "IO-117",
+    "status": "usable",
     "aliases": ["GreenCube"],
     "urls": ["https://www.s5lab.space/index.php/digipeater-greencube/"],
     "modes": ["digital"]
   },
   "IO-86": {
-    "heard": true,
-    "tqsl_name": "IO-86",
+    "status": "usable",
     "aliases": ["LAPAN A2"]
   },
   "ISS": {
-    "heard": true,
+    "status": "usable",
     "tqsl_name": "ARISS",
     "urls": ["https://www.ariss.org/current-status-of-iss-stations.html"],
     "modes": ["fm"]
   },
   "PO-101": {
-    "heard": true,
-    "tqsl_name": "PO-101",
+    "status": "usable",
     "aliases": ["Diwata-2"]
   },
   "QO-100": {
-    "heard": true,
-    "tqsl_name": "QO-100",
+    "status": "usable",
     "aliases": ["Es’hail 2"],
     "urls": [
       "https://amsat-uk.org/satellites/geo/eshail-2/",
@@ -60,19 +55,16 @@
     "modes": ["linear", "digital"]
   },
   "RS-44": {
-    "heard": true,
-    "tqsl_name": "RS-44",
+    "status": "usable",
     "modes": ["linear"]
   },
   "SO-121": {
-    "heard": true,
-    "tqsl_name": "SO-121",
+    "status": "usable",
     "aliases": ["Hades-D"],
     "modes": ["fm"]
   },
   "SO-50": {
-    "heard": true,
-    "tqsl_name": "SO-50",
+    "status": "usable",
     "aliases": ["SAUDISAT 1C"],
     "urls": [
       "https://www.amsat.org/two-way-satellites/so-50-satellite-information/"
@@ -80,8 +72,7 @@
     "modes": ["fm"]
   },
   "XW-2B": {
-    "heard": true,
-    "tqsl_name": "XW-2B",
+    "status": "usable",
     "aliases": ["CAS-3B"],
     "urls": [
       "https://www.amsat.org/wordpress/wp-content/uploads/2015/09/XW-2CAS-3-Sats.pdf"
