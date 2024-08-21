@@ -21,8 +21,7 @@ data = tle_text.split("\n").each_slice(3).map do |name, tle1, tle2|
     'tle' => [tle1, tle2],
     'heard' => false,
     'aliases' => [],
-    'modes' => [],
-    'urls' => [],
+    'links' => [],
     'transponders' => [],
     'status' => 'unknown'
 }.merge(meta)
@@ -35,7 +34,7 @@ output = {
 }
 
 Hamdata.open_output_file('amsat/satellites.json') do |f|
-  f.puts JSON.pretty_generate(output)
+  f.puts JSON.generate(output)
 end
 
 Hamdata.open_output_file('amsat/dailytle.txt') do |f|
