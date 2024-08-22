@@ -11,7 +11,7 @@ meta = JSON.load(File.read(meta_path))
 
 # Split into 3-line chunks
 data = tle_text.split("\n").each_slice(3).map do |name, tle1, tle2|
-  number = tle2[2..6].to_i
+  number = tle2[2..6]
   meta = meta[name] || {}
 
   {
