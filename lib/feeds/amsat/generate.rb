@@ -19,7 +19,6 @@ data = tle_text.split("\n").each_slice(3).map do |name, tle1, tle2|
     'tqsl_name' => name,
     'number' => number,
     'tle' => [tle1, tle2],
-    'heard' => false,
     'aliases' => [],
     'links' => [],
     'transponders' => [],
