@@ -7,12 +7,12 @@ require_relative '../../hamdata'
 tle_text = URI.open('https://www.amsat.org/tle/dailytle.txt').read
 
 meta_path = File.join(File.dirname(__FILE__), 'meta.json')
-meta = JSON.load(File.read(meta_path))
+metas = JSON.load(File.read(meta_path))
 
 # Split into 3-line chunks
 data = tle_text.split("\n").each_slice(3).map do |name, tle1, tle2|
   number = tle2[2..6]
-  meta = meta[name] || {}
+  meta = metas[name] || {}
 
   {
     'name' => name,
