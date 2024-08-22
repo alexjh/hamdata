@@ -14,6 +14,11 @@ data = tle_text.split("\n").each_slice(3).map do |name, tle1, tle2|
   number = tle2[2..6]
   meta = metas[name]
 
+  # HACK: Fix the drag term for QO-100, so that SatelliteKit on iOS can parse it
+  if tle1[54..60] == '00000 0'
+    tle1[54..60] = '00000-0'
+  end
+
   result = {
     'name' => name,
     'number' => number,
