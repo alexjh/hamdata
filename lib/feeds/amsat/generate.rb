@@ -12,18 +12,16 @@ metas = JSON.load(File.read(meta_path))
 # Split into 3-line chunks
 data = tle_text.split("\n").each_slice(3).map do |name, tle1, tle2|
   number = tle2[2..6]
-  meta = metas[name] || {}
+  meta = metas[name]
 
-  {
+  result = {
     'name' => name,
-    'tqsl_name' => name,
     'number' => number,
     'tle' => [tle1, tle2],
-    'aliases' => [],
-    'links' => [],
-    'transponders' => [],
-    'status' => 'unknown'
-}.merge(meta)
+  }
+
+  result['meta'] = meta if meta
+  result
 end
 
 
