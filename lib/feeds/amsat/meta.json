@@ -20,10 +20,6 @@
         "inverting": true,
         "downlink": { "min": 145.925, "max": 145.975 },
         "uplink": { "min": 432.125, "max": 432.175 }
-      },
-      {
-        "mode": "cw",
-        "downlink": { "min": 145.9775, "max": 145.9775 }
       }
     ]
   },
