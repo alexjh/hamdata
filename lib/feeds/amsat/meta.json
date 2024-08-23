@@ -76,7 +76,6 @@
     ]
   },
   "IO-86": {
-    "status": "usable",
     "aliases": ["LAPAN A2"]
   },
   "ISS": {
@@ -93,6 +92,11 @@
         "mode": "fm",
         "downlink": { "min": 437.8, "max": 437.8 },
         "uplink": { "min": 145.99, "max": 145.99 }
+      },
+      {
+        "mode": "digital",
+        "downlink": { "min": 145.825, "max": 145.825 },
+        "uplink": { "min": 145.825, "max": 145.825 }
       }
     ]
   },
@@ -175,6 +179,18 @@
         "inverting": true,
         "downlink": { "min": 145.73, "max": 145.75 },
         "uplink": { "min": 435.09, "max": 435.11 }
+      }
+    ]
+  },
+  "JO-97": {
+    "status": "usable",
+    "aliases": ["JY1Sat"],
+    "transponders": [
+      {
+        "mode": "linear",
+        "inverting": true,
+        "downlink": { "min": 145.855, "max": 145.875 },
+        "uplink": { "min": 435.1, "max": 435.12 }
       }
     ]
   }
