@@ -85,6 +85,20 @@ def get_status_table
   transponder_statuses
 end
 
+def best_transponder_status(statuses)
+  return :unknown if statuses.empty?
+
+  if statuses.include?(:active)
+    :active
+  elsif statuses.include?(:conflicting)
+    :conflicting
+  elsif statuses.include?(:inactive)
+    :inactive
+  else
+    :unknown
+  end
+end
+
 transponder_statuses = get_status_table
 
 meta_path = File.join(File.dirname(__FILE__), 'meta.json')
@@ -106,13 +120,16 @@ data = tle_text.split("\n").each_slice(3).map do |name, tle1, tle2|
     'tle' => [tle1, tle2],
   }
 
+  all_statuses = []
   if meta && meta['transponders']
     meta['transponders'].each do |transponder|
       status = transponder_statuses[transponder['id']]
+      all_statuses << status
       transponder.merge!('status' => status || 'unknown')
     end
   end
-
+  
+  result['status'] = best_transponder_status(all_statuses)
   result['meta'] = meta if meta
   result
 end
