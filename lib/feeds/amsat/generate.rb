@@ -114,22 +114,22 @@ data = tle_text.split("\n").each_slice(3).map do |name, tle1, tle2|
     tle1[54..60] = '00000-0'
   end
 
+  all_transponder_statuses = []
+  if meta && meta['transponders']
+    meta['transponders'].each do |transponder|
+      status = transponder_statuses[transponder['id']]
+      all_transponder_statuses << status
+      transponder.merge!('status' => status || 'unknown')
+    end
+  end
+
   result = {
     'name' => name,
     'number' => number,
     'tle' => [tle1, tle2],
+    'status' => best_transponder_status(all_transponder_statuses)
   }
 
-  all_statuses = []
-  if meta && meta['transponders']
-    meta['transponders'].each do |transponder|
-      status = transponder_statuses[transponder['id']]
-      all_statuses << status
-      transponder.merge!('status' => status || 'unknown')
-    end
-  end
-  
-  result['status'] = best_transponder_status(all_statuses)
   result['meta'] = meta if meta
   result
 end
