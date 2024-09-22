@@ -1,6 +1,5 @@
 {
   "AO-07": {
-    "status": "usable",
     "tqsl_name": "AO-7",
     "links": [
       {
@@ -10,12 +9,14 @@
     ],
     "transponders": [
       {
+        "id": "AO-07-LIN-A",
         "mode": "linear",
         "inverting": false,
         "downlink": { "min": 29.4, "max": 29.5 },
         "uplink": { "min": 145.85, "max": 145.95 }
       },
       {
+        "id": "AO-07-LIN-B",
         "mode": "linear",
         "inverting": true,
         "downlink": { "min": 145.925, "max": 145.975 },
@@ -24,7 +25,6 @@
     ]
   },
   "AO-73": {
-    "status": "usable",
     "aliases": ["FUNcube-1"],
     "links": [
       {
@@ -34,6 +34,7 @@
     ],
     "transponders": [
       {
+        "id": "AO-73-LIN",
         "mode": "linear",
         "inverting": true,
         "downlink": { "min": 145.95, "max": 145.97 },
@@ -42,7 +43,6 @@
     ]
   },
   "AO-91": {
-    "status": "usable",
     "aliases": ["Fox-1B"],
     "links": [
       {
@@ -52,14 +52,15 @@
     ],
     "transponders": [
       {
+        "id": "AO-91-FM",
         "mode": "fm",
         "downlink": { "min": 145.96, "max": 145.96 },
-        "uplink": { "min": 435.25, "max": 435.25 }
+        "uplink": { "min": 435.25, "max": 435.25 },
+        "note": "67.0 Hz CTCSS"
       }
     ]
   },
   "IO-117": {
-    "status": "usable",
     "aliases": ["GreenCube"],
     "links": [
       {
@@ -69,6 +70,7 @@
     ],
     "transponders": [
       {
+        "id": "IO-117-DIGI",
         "mode": "digital",
         "downlink": { "min": 435.31, "max": 435.31 },
         "uplink": { "min": 435.31, "max": 435.31 }
@@ -76,10 +78,18 @@
     ]
   },
   "IO-86": {
-    "aliases": ["LAPAN A2"]
+    "aliases": ["LAPAN A2"],
+    "transponders": [
+      {
+        "id": "IO-86-FM",
+        "mode": "fm",
+        "downlink": { "min": 435.88, "max": 435.88 },
+        "uplink": { "min": 145.88, "max": 145.88 },
+        "note": "88.5 Hz CTCSS"
+      }
+    ]
   },
   "ISS": {
-    "status": "usable",
     "tqsl_name": "ARISS",
     "links": [
       {
@@ -89,11 +99,14 @@
     ],
     "transponders": [
       {
+        "id": "ISS-FM",
         "mode": "fm",
         "downlink": { "min": 437.8, "max": 437.8 },
-        "uplink": { "min": 145.99, "max": 145.99 }
+        "uplink": { "min": 145.99, "max": 145.99 },
+        "note": "67.0 Hz CTCSS"
       },
       {
+        "id": "ISS-APRS",
         "mode": "digital",
         "downlink": { "min": 145.825, "max": 145.825 },
         "uplink": { "min": 145.825, "max": 145.825 }
@@ -101,19 +114,28 @@
     ]
   },
   "PO-101": {
-    "status": "usable",
     "aliases": ["Diwata-2"],
     "transponders": [
       {
+        "id": "PO-101-FM",
         "mode": "fm",
         "downlink": { "min": 145.9, "max": 145.9 },
-        "uplink": { "min": 437.5, "max": 437.5 }
+        "uplink": { "min": 437.5, "max": 437.5 },
+        "note": "141.3 Hz CTCSS"
       }
     ]
   },
   "QO-100": {
-    "status": "usable",
     "aliases": ["Es’hail 2"],
+    "transponders": [
+      {
+        "id": "QO-100-LIN-NB",
+        "mode": "linear",
+        "inverting": false,
+        "downlink": { "min": 10489.55, "max": 10489.8 },
+        "uplink": { "min": 2400.05, "max": 2400.3 }
+      }
+    ],
     "links": [
       {
         "title": "AMSAT-UK",
@@ -126,9 +148,9 @@
     ]
   },
   "RS-44": {
-    "status": "usable",
     "transponders": [
       {
+        "id": "RS-44-LIN",
         "mode": "linear",
         "inverting": true,
         "downlink": { "min": 435.61, "max": 435.67 },
@@ -137,10 +159,10 @@
     ]
   },
   "SO-121": {
-    "status": "usable",
     "aliases": ["Hades-D"],
     "transponders": [
       {
+        "id": "SO-121-FM",
         "mode": "fm",
         "downlink": { "min": 436.663, "max": 436.663 },
         "uplink": { "min": 145.875, "max": 145.875 }
@@ -148,7 +170,6 @@
     ]
   },
   "SO-50": {
-    "status": "usable",
     "aliases": ["SAUDISAT 1C"],
     "links": [
       {
@@ -158,14 +179,15 @@
     ],
     "transponders": [
       {
+        "id": "SO-50-FM",
         "mode": "fm",
         "downlink": { "min": 436.795, "max": 436.795 },
-        "uplink": { "min": 145.85, "max": 145.85 }
+        "uplink": { "min": 145.85, "max": 145.85 },
+        "note": "67.0 Hz CTCSS; 10-minute timer armed with 2-second carrier of 74.4 Hz"
       }
     ]
   },
   "XW-2B": {
-    "status": "usable",
     "aliases": ["CAS-3B"],
     "links": [
       {
@@ -175,6 +197,7 @@
     ],
     "transponders": [
       {
+        "id": "XW-2B-LIN",
         "mode": "linear",
         "inverting": true,
         "downlink": { "min": 145.73, "max": 145.75 },
@@ -182,15 +205,72 @@
       }
     ]
   },
+  "XW-2C": {
+    "aliases": ["CAS-3C"],
+    "links": [
+      {
+        "title": "AMSAT",
+        "url": "https://www.amsat.org/wordpress/wp-content/uploads/2015/09/XW-2CAS-3-Sats.pdf"
+      }
+    ],
+    "transponders": [
+      {
+        "id": "XW-2C-LIN",
+        "mode": "linear",
+        "inverting": true,
+        "downlink": { "min": 145.795, "max": 145.815 },
+        "uplink": { "min": 435.15, "max": 435.17 }
+      }
+    ]
+  },
   "JO-97": {
-    "status": "usable",
     "aliases": ["JY1Sat"],
     "transponders": [
       {
+        "id": "JO-97-LIN",
         "mode": "linear",
         "inverting": true,
         "downlink": { "min": 145.855, "max": 145.875 },
         "uplink": { "min": 435.1, "max": 435.12 }
+      }
+    ]
+  },
+  "CAS-3H": {
+    "aliases": ["LilacSat-2"],
+    "transponders": [
+      {
+        "id": "CAS-3H-FM",
+        "mode": "fm",
+        "downlink": { "min": 437.2, "max": 437.2 },
+        "uplink": { "min": 144.35, "max": 144.35 },
+        "note": "Operational, but rarely active"
+      }
+    ]
+  },
+  "MESAT1": {
+    "transponders": [
+      {
+        "id": "MESAT1-LIN",
+        "mode": "linear",
+        "inverting": true,
+        "downlink": { "min": 435.81, "max": 435.84 },
+        "uplink": { "min": 145.91, "max": 145.94 }
+      }
+    ],
+    "links": [
+      {
+        "title": "MaineSat",
+        "url": "https://www.mainesat.org/mesat1/"
+      }
+    ]
+  },
+  "SONATE-2": {
+    "transponders": [
+      {
+        "id": "SONATE-2-APRS",
+        "mode": "digital",
+        "downlink": { "min": 145.825, "max": 145.825 },
+        "uplink": { "min": 145.825, "max": 145.825 }
       }
     ]
   }
