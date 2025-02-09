@@ -24,6 +24,7 @@ def get_status_table
   transponder_ids = {
     "AO-7[A]" => "AO-07-LIN-A",
     "AO-7[B]" => "AO-07-LIN-B",
+    "AO-73" => "AO-73-LIN",
     "AO-91" => "AO-91-FM",
     # "BHUTAN-1" => "todo",
     # "CAS-4A" => "todo",
